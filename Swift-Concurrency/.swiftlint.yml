@@ -11,6 +11,11 @@ disabled_rules: # rule identifiers to exclude from running
 - shorthand_operator
 - line_length
 - type_body_length
+- blankLinesAtStartOfScope
+- wrapSingleLineComments
+- redundantThrows
+- emptyBraces
+- sortImports
 
 opt_in_rules: # some rules are only opt-in
 # Find all the available rules by running: swiftlint rules
