@@ -68,3 +68,9 @@ type_body_length:
 type_name:
   max_length: 50 # Maximum allowed length to 50
   min_length: 3  # Default minimum length
+
+--disable blankLinesAtStartOfScope
+--disable redundantThrows
+--disable sortImports
+--disable emptyBraces
+--disable wrapSingleLineComments
