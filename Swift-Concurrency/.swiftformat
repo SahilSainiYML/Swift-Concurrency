@@ -1,3 +1,8 @@
 --indent 4
 --linebreaks lf
 --maxwidth 120
+--disable blankLinesAtStartOfScope
+--disable redundantThrows
+--disable sortImports
+--disable emptyBraces
+--disable wrapSingleLineComments

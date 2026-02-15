@@ -11,11 +11,6 @@ disabled_rules: # rule identifiers to exclude from running
 - shorthand_operator
 - line_length
 - type_body_length
-- blankLinesAtStartOfScope
-- wrapSingleLineComments
-- redundantThrows
-- emptyBraces
-- sortImports
 
 opt_in_rules: # some rules are only opt-in
 # Find all the available rules by running: swiftlint rules
@@ -68,9 +63,3 @@ type_body_length:
 type_name:
   max_length: 50 # Maximum allowed length to 50
   min_length: 3  # Default minimum length
-
---disable blankLinesAtStartOfScope
---disable redundantThrows
---disable sortImports
---disable emptyBraces
---disable wrapSingleLineComments
