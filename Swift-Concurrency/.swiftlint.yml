@@ -11,6 +11,7 @@ disabled_rules: # rule identifiers to exclude from running
 - shorthand_operator
 - line_length
 - type_body_length
+- static_over_final_class
 
 opt_in_rules: # some rules are only opt-in
 # Find all the available rules by running: swiftlint rules
@@ -63,3 +64,4 @@ type_body_length:
 type_name:
   max_length: 50 # Maximum allowed length to 50
   min_length: 3  # Default minimum length
+  allowed_symbols: "_"
