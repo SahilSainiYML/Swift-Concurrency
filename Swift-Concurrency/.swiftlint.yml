@@ -1,3 +1,65 @@
-line_length: 120
-identifier_name:
-  min_length: 2
+disabled_rules: # rule identifiers to exclude from running
+- file_length
+- function_body_length
+- line_length
+- missing_docs
+- private_outlet
+- cyclomatic_complexity
+- trailing_whitespace
+- identifier_name
+- function_parameter_count
+- shorthand_operator
+- line_length
+- type_body_length
+
+opt_in_rules: # some rules are only opt-in
+# Find all the available rules by running: swiftlint rules
+- force_unwrapping
+- closure_parameter_position
+- unneeded_parentheses_in_closure_argument
+- closure_spacing
+- empty_count
+- trailing_semicolon
+- explicit_init
+- function_body_length
+- implicit_return
+- implicitly_unwrapped_optional
+- let_var_whitespace
+- line_length
+- literal_expression_end_indentation
+- operator_usage_whitespace
+- overridden_super_call
+- private_action
+- private_outlet
+- quick_discouraged_call
+- quick_discouraged_focused_test
+- quick_discouraged_pending_test
+- redundant_nil_coalescing
+- required_enum_case
+- single_test_class
+- sorted_first_last
+- statement_position
+- switch_case_on_newline
+- vertical_parameter_alignment_on_call
+- yoda_condition
+
+included: # paths to include during linting. `--path` is ignored if present.
+
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+
+
+# Customize behaviour of the existing rules
+large_tuple: 5
+
+nesting:
+type_level: 3
+statement_level: 5
+
+type_body_length:
+- 400 # warning
+- 600 # error
+
+type_name:
+  max_length: 50 # Maximum allowed length to 50
+  min_length: 3  # Default minimum length
