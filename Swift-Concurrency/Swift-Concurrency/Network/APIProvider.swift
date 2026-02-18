@@ -42,6 +42,7 @@ struct APIProvider {
         
     }
     
+    //Old way with closure
     func postURLRequest(completion: @escaping (Result<PostData, NetworkingError>) -> Void) {
         let url = URL(string: "https://httpbin.org/post")!
         var request = URLRequest(url: url)
@@ -119,4 +120,29 @@ struct PostResponse: Decodable {
     /// In this case, we can reuse the same `PostData` struct as
     /// httpbin returns the received data equally.
     let json: PostData
+}
+
+
+final class SomeTaskExecutor {
+    func someSynchronousMethod() {
+        // Inner logic...
+    }
+
+    func someAsynchronousMethod() async {
+        // Inner logic...
+    }
+    
+    var currentTask: Task<Void, Never>?
+
+    func execute() {
+        /// Store a reference to the task.
+        currentTask = Task {
+            await someAsynchronousMethod()
+        }
+    }
+
+    deinit {
+        /// Cancel the task when the outer instance is being deinitialized.
+        currentTask?.cancel()
+    }
 }
