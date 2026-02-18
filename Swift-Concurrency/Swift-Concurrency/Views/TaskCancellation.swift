@@ -39,7 +39,6 @@ struct ContentView1: View {
 
             return UIImage(data: imageData)
         }
-        throw URLError(error: .badURL)
         imageTask.cancel()
         return try await imageTask.value
     }
